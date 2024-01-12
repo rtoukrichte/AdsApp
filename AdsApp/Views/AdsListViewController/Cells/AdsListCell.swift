@@ -73,7 +73,7 @@ class AdsListCell: UITableViewCell, ConfigurableCell {
     
     let urgentView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.red
+        view.backgroundColor = UIColor.red.withAlphaComponent(0.7)
         view.layer.masksToBounds = true
         view.isHidden = true
         view.layer.cornerRadius = 6
@@ -117,8 +117,7 @@ class AdsListCell: UITableViewCell, ConfigurableCell {
         addConstraintsWithFormat("V:|-10-[v0]-10-[v1(1)]|", views: thumbImageView, separatorView)
         
         addConstraintsWithFormat("H:|-10-[v0]-10-|", views: separatorView)
-        
-        //addConstraint(NSLayoutConstraint(item: urgentView, attribute: .top, relatedBy: .equal, toItem: thumbImageView, attribute: .top, multiplier: 1, constant: 15))
+
         
         addConstraint(NSLayoutConstraint(item: urgentView, attribute: .right, relatedBy: .equal, toItem: thumbImageView, attribute: .right, multiplier: 1, constant: -10))
         
@@ -160,9 +159,15 @@ class AdsListCell: UITableViewCell, ConfigurableCell {
         //height constraint
         addConstraint(NSLayoutConstraint(item: priceLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
         
-        
-        
     }
+    
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        let bgColorView = UIView()
+//        bgColorView.backgroundColor = .clear
+//        self.selectedBackgroundView = bgColorView
+//    }
 
 }
 

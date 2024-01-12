@@ -9,21 +9,47 @@
 /* Begin PBXBuildFile section */
 		A4D0E98B2B4DACB50077E294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E98A2B4DACB50077E294 /* AppDelegate.swift */; };
 		A4D0E98D2B4DACB50077E294 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E98C2B4DACB50077E294 /* SceneDelegate.swift */; };
-		A4D0E98F2B4DACB50077E294 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E98E2B4DACB50077E294 /* ViewController.swift */; };
-		A4D0E9922B4DACB50077E294 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D0E9902B4DACB50077E294 /* Main.storyboard */; };
+		A4D0E98F2B4DACB50077E294 /* AdsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E98E2B4DACB50077E294 /* AdsListViewController.swift */; };
 		A4D0E9942B4DACB70077E294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D0E9932B4DACB70077E294 /* Assets.xcassets */; };
 		A4D0E9972B4DACB70077E294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D0E9952B4DACB70077E294 /* LaunchScreen.storyboard */; };
+		A4D0E9A02B4DB1870077E294 /* AdsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E99F2B4DB1870077E294 /* AdsListCell.swift */; };
+		A4D0E9A32B4DB1BA0077E294 /* DetailAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9A22B4DB1BA0077E294 /* DetailAdViewController.swift */; };
+		A4D0E9A72B4DB2090077E294 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9A62B4DB2090077E294 /* ServiceManager.swift */; };
+		A4D0E9AA2B4DB2790077E294 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9A92B4DB2790077E294 /* CategoriesModel.swift */; };
+		A4D0E9AC2B4DB2850077E294 /* AdsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9AB2B4DB2850077E294 /* AdsModel.swift */; };
+		A4D0E9AE2B4DB2AA0077E294 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9AD2B4DB2AA0077E294 /* Constants.swift */; };
+		A4D0E9B02B4DC46F0077E294 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9AF2B4DC46F0077E294 /* Reachability.swift */; };
+		A4D0E9B32B4DCE690077E294 /* AdsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9B22B4DCE690077E294 /* AdsListViewModel.swift */; };
+		A4D0E9B52B4EED380077E294 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9B42B4EED380077E294 /* ReusableCell.swift */; };
+		A4D0E9B92B4FF5740077E294 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9B82B4FF5740077E294 /* CategoryCell.swift */; };
+		A4D0E9BC2B5048830077E294 /* DetailsAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9BB2B5048830077E294 /* DetailsAdView.swift */; };
+		A4D0E9BE2B5172170077E294 /* DetailsAdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9BD2B5172170077E294 /* DetailsAdViewModel.swift */; };
+		A4D0E9C02B51850D0077E294 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9BF2B51850C0077E294 /* Extensions.swift */; };
+		A4D0E9C12B519F050077E294 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D0E9902B4DACB50077E294 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A4D0E9872B4DACB50077E294 /* AdsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D0E98A2B4DACB50077E294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4D0E98C2B4DACB50077E294 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A4D0E98E2B4DACB50077E294 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4D0E98E2B4DACB50077E294 /* AdsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListViewController.swift; sourceTree = "<group>"; };
 		A4D0E9912B4DACB50077E294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4D0E9932B4DACB70077E294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4D0E9962B4DACB70077E294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4D0E9982B4DACB70077E294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4D0E99F2B4DB1870077E294 /* AdsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListCell.swift; sourceTree = "<group>"; };
+		A4D0E9A22B4DB1BA0077E294 /* DetailAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAdViewController.swift; sourceTree = "<group>"; };
+		A4D0E9A62B4DB2090077E294 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		A4D0E9A92B4DB2790077E294 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
+		A4D0E9AB2B4DB2850077E294 /* AdsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsModel.swift; sourceTree = "<group>"; };
+		A4D0E9AD2B4DB2AA0077E294 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A4D0E9AF2B4DC46F0077E294 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		A4D0E9B22B4DCE690077E294 /* AdsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsListViewModel.swift; sourceTree = "<group>"; };
+		A4D0E9B42B4EED380077E294 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		A4D0E9B82B4FF5740077E294 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		A4D0E9BB2B5048830077E294 /* DetailsAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAdView.swift; sourceTree = "<group>"; };
+		A4D0E9BD2B5172170077E294 /* DetailsAdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAdViewModel.swift; sourceTree = "<group>"; };
+		A4D0E9BF2B51850C0077E294 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +82,100 @@
 		A4D0E9892B4DACB50077E294 /* AdsApp */ = {
 			isa = PBXGroup;
 			children = (
-				A4D0E98A2B4DACB50077E294 /* AppDelegate.swift */,
-				A4D0E98C2B4DACB50077E294 /* SceneDelegate.swift */,
-				A4D0E98E2B4DACB50077E294 /* ViewController.swift */,
-				A4D0E9902B4DACB50077E294 /* Main.storyboard */,
-				A4D0E9932B4DACB70077E294 /* Assets.xcassets */,
-				A4D0E9952B4DACB70077E294 /* LaunchScreen.storyboard */,
-				A4D0E9982B4DACB70077E294 /* Info.plist */,
+				A4D0E9A82B4DB25B0077E294 /* Models */,
+				A4D0E9B72B4EFB9D0077E294 /* Views */,
+				A4D0E9B12B4DCE540077E294 /* ViewModel */,
+				A4D0E9A52B4DB1F90077E294 /* ServiceManager */,
+				A4D0E9A42B4DB1F20077E294 /* Utils */,
+				A4D0E9B62B4EFB7E0077E294 /* Ressources */,
 			);
 			path = AdsApp;
+			sourceTree = "<group>";
+		};
+		A4D0E99E2B4DACBE0077E294 /* AdsListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0E9BA2B500CE60077E294 /* Cells */,
+				A4D0E98E2B4DACB50077E294 /* AdsListViewController.swift */,
+			);
+			path = AdsListViewController;
+			sourceTree = "<group>";
+		};
+		A4D0E9A12B4DB1910077E294 /* DetailAdsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0E9BB2B5048830077E294 /* DetailsAdView.swift */,
+				A4D0E9A22B4DB1BA0077E294 /* DetailAdViewController.swift */,
+			);
+			path = DetailAdsViewController;
+			sourceTree = "<group>";
+		};
+		A4D0E9A42B4DB1F20077E294 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0E9AD2B4DB2AA0077E294 /* Constants.swift */,
+				A4D0E9AF2B4DC46F0077E294 /* Reachability.swift */,
+				A4D0E9B42B4EED380077E294 /* ReusableCell.swift */,
+				A4D0E9BF2B51850C0077E294 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A4D0E9A52B4DB1F90077E294 /* ServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0E9A62B4DB2090077E294 /* ServiceManager.swift */,
+			);
+			path = ServiceManager;
+			sourceTree = "<group>";
+		};
+		A4D0E9A82B4DB25B0077E294 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0E9A92B4DB2790077E294 /* CategoriesModel.swift */,
+				A4D0E9AB2B4DB2850077E294 /* AdsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A4D0E9B12B4DCE540077E294 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0E9B22B4DCE690077E294 /* AdsListViewModel.swift */,
+				A4D0E9BD2B5172170077E294 /* DetailsAdViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A4D0E9B62B4EFB7E0077E294 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0E98A2B4DACB50077E294 /* AppDelegate.swift */,
+				A4D0E98C2B4DACB50077E294 /* SceneDelegate.swift */,
+				A4D0E9902B4DACB50077E294 /* Main.storyboard */,
+				A4D0E9952B4DACB70077E294 /* LaunchScreen.storyboard */,
+				A4D0E9932B4DACB70077E294 /* Assets.xcassets */,
+				A4D0E9982B4DACB70077E294 /* Info.plist */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		A4D0E9B72B4EFB9D0077E294 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0E9A12B4DB1910077E294 /* DetailAdsViewController */,
+				A4D0E99E2B4DACBE0077E294 /* AdsListViewController */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A4D0E9BA2B500CE60077E294 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0E99F2B4DB1870077E294 /* AdsListCell.swift */,
+				A4D0E9B82B4FF5740077E294 /* CategoryCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +236,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4D0E9C12B519F050077E294 /* Main.storyboard in Resources */,
 				A4D0E9972B4DACB70077E294 /* LaunchScreen.storyboard in Resources */,
 				A4D0E9942B4DACB70077E294 /* Assets.xcassets in Resources */,
-				A4D0E9922B4DACB50077E294 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +249,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4D0E98F2B4DACB50077E294 /* ViewController.swift in Sources */,
+				A4D0E9B92B4FF5740077E294 /* CategoryCell.swift in Sources */,
+				A4D0E9B32B4DCE690077E294 /* AdsListViewModel.swift in Sources */,
+				A4D0E9BC2B5048830077E294 /* DetailsAdView.swift in Sources */,
+				A4D0E9A32B4DB1BA0077E294 /* DetailAdViewController.swift in Sources */,
+				A4D0E9A02B4DB1870077E294 /* AdsListCell.swift in Sources */,
+				A4D0E9AC2B4DB2850077E294 /* AdsModel.swift in Sources */,
+				A4D0E98F2B4DACB50077E294 /* AdsListViewController.swift in Sources */,
 				A4D0E98B2B4DACB50077E294 /* AppDelegate.swift in Sources */,
+				A4D0E9AA2B4DB2790077E294 /* CategoriesModel.swift in Sources */,
 				A4D0E98D2B4DACB50077E294 /* SceneDelegate.swift in Sources */,
+				A4D0E9BE2B5172170077E294 /* DetailsAdViewModel.swift in Sources */,
+				A4D0E9C02B51850D0077E294 /* Extensions.swift in Sources */,
+				A4D0E9B52B4EED380077E294 /* ReusableCell.swift in Sources */,
+				A4D0E9A72B4DB2090077E294 /* ServiceManager.swift in Sources */,
+				A4D0E9B02B4DC46F0077E294 /* Reachability.swift in Sources */,
+				A4D0E9AE2B4DB2AA0077E294 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -289,12 +413,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2UKG28G9VV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AdsApp/Info.plist;
+				INFOPLIST_FILE = AdsApp/Ressources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +428,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.project.AdsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,12 +446,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2UKG28G9VV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AdsApp/Info.plist;
+				INFOPLIST_FILE = AdsApp/Ressources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,6 +461,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.project.AdsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

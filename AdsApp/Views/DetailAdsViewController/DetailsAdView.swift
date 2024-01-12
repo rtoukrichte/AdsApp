@@ -1,5 +1,5 @@
 //
-//  DetailAdView.swift
+//  DetailsAdView.swift
 //  AdsApp
 //
 //  Created by Rida TOUKRICHTE on 11/01/2024.
