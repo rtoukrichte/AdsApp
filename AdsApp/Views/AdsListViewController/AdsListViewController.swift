@@ -196,10 +196,9 @@ extension AdsListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedAd = self.filtredAds[indexPath.row]
-        let category = adsListViewModel.getCategoryName(from: selectedAd.categoryID)
         
         let detailsAdViewModel = DetailsAdViewModel(ad: selectedAd, adsViewModel: adsListViewModel)
-        let detailsVC = DetailAdViewController(selectedAd: selectedAd, categoryName: category, detailsViewModel: detailsAdViewModel)
+        let detailsVC = DetailAdViewController(detailsViewModel: detailsAdViewModel)
         self.navigationController?.pushViewController(detailsVC, animated: true)
     }
     

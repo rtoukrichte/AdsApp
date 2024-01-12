@@ -5,8 +5,38 @@
 //  Created by Rida TOUKRICHTE on 12/01/2024.
 //
 
-import Foundation
+import UIKit
 
+extension UIView {
+    func addConstraintsWithFormat(_ format: String, views: UIView...) {
+        var viewsDictionary = [String: UIView]()
+        for (index, view) in views.enumerated() {
+            let key = "v\(index)"
+            view.translatesAutoresizingMaskIntoConstraints = false
+            viewsDictionary[key] = view
+        }
+        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewsDictionary))
+    }
+}
+
+extension UIImageView {
+    func load(url: URL, completion: @escaping (Bool) -> ()) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                        completion(true)
+                    }
+                }
+            }
+            else{
+                completion(false)
+            }
+        }
+    }
+}
 
 extension String {
     func convertToDate() -> Date {

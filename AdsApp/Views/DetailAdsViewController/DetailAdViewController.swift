@@ -10,7 +10,6 @@ import UIKit
 class DetailAdViewController: UIViewController, UIScrollViewDelegate {
 
     var detailsView: DetailsAdView?
-    
     var detailsViewModel: DetailsAdViewModel?
     
     private var scrollView: UIScrollView = {
@@ -27,10 +26,9 @@ class DetailAdViewController: UIViewController, UIScrollViewDelegate {
         return view
     }()
     
-    init(selectedAd: Ad, categoryName: String?, detailsViewModel: DetailsAdViewModel) {
+    init(detailsViewModel: DetailsAdViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.detailsViewModel = detailsViewModel
-        view.backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {

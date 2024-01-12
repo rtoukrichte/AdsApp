@@ -13,7 +13,7 @@ class CategoryCell: UICollectionViewCell, ConfigurableCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
+        setupViews()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,7 +42,7 @@ class CategoryCell: UICollectionViewCell, ConfigurableCell {
         self.titleLabel.text = item.name
     }
     
-    func setupView() {
+    private func setupViews() {
         containerView.addSubview(titleLabel)
         addSubview(containerView)
         

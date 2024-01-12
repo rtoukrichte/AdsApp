@@ -102,7 +102,7 @@ class AdsListCell: UITableViewCell, ConfigurableCell {
         }
     }
    
-    func setupViews() {
+    private func setupViews() {
         addSubview(thumbImageView)
         addSubview(separatorView)
         addSubview(titleLabel)
@@ -130,10 +130,7 @@ class AdsListCell: UITableViewCell, ConfigurableCell {
         
         //Title Label constraints
         addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: thumbImageView, attribute: .bottom, multiplier: 1, constant: 10))
-        //left constraint
-        //addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .left, relatedBy: .equal, toItem: userProfileImageView, attribute: .right, multiplier: 1, constant: 8))
         addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 15))
-        //right constraint
         addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .right, relatedBy: .equal, toItem: thumbImageView, attribute: .right, multiplier: 1, constant: 0))
         
                 
@@ -141,72 +138,19 @@ class AdsListCell: UITableViewCell, ConfigurableCell {
         addConstraint(NSLayoutConstraint(item: thumbImageView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 200))
         
         
-        
         // category label
         addConstraint(NSLayoutConstraint(item: categoryLabel, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 8))
         addConstraint(NSLayoutConstraint(item: categoryLabel, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 15))
-        //right constraint
         addConstraint(NSLayoutConstraint(item: categoryLabel, attribute: .right, relatedBy: .equal, toItem: titleLabel, attribute: .right, multiplier: 1, constant: 0))
-        //height constraint
         addConstraint(NSLayoutConstraint(item: categoryLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
         
         
         // Price Label constraints
         addConstraint(NSLayoutConstraint(item: priceLabel, attribute: .top, relatedBy: .equal, toItem: categoryLabel, attribute: .bottom, multiplier: 1, constant: 20))
         addConstraint(NSLayoutConstraint(item: priceLabel, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 15))
-        //right constraint
         addConstraint(NSLayoutConstraint(item: priceLabel, attribute: .right, relatedBy: .equal, toItem: categoryLabel, attribute: .right, multiplier: 1, constant: 0))
-        //height constraint
         addConstraint(NSLayoutConstraint(item: priceLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
         
     }
-    
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        let bgColorView = UIView()
-//        bgColorView.backgroundColor = .clear
-//        self.selectedBackgroundView = bgColorView
-//    }
 
-}
-
-extension UIView {
-    func addConstraintsWithFormat(_ format: String, views: UIView...) {
-        var viewsDictionary = [String: UIView]()
-        for (index, view) in views.enumerated() {
-            let key = "v\(index)"
-            view.translatesAutoresizingMaskIntoConstraints = false
-            viewsDictionary[key] = view
-        }
-        
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewsDictionary))
-    }
-    
-//    func addConstraint(item: Any, toItem: Any) {
-//        addConstraint(NSLayoutConstraint(item: item, attribute: .top, relatedBy: .equal, toItem: toItem, attribute: .bottom, multiplier: 1, constant: 20))
-//        addConstraint(NSLayoutConstraint(item: item, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 15))
-//        //right constraint
-//        addConstraint(NSLayoutConstraint(item: item, attribute: .right, relatedBy: .equal, toItem: toItem, attribute: .right, multiplier: 1, constant: 0))
-//        //height constraint
-//        addConstraint(NSLayoutConstraint(item: item, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
-//    }
-}
-
-extension UIImageView {
-    func load(url: URL, completion: @escaping (Bool) -> ()) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                        completion(true)
-                    }
-                }
-            }
-            else{
-                completion(false)
-            }
-        }
-    }
 }
