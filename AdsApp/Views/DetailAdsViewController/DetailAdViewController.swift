@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailAdViewController: UIViewController, UIScrollViewDelegate {
+class DetailAdViewController: UIViewController {
 
     var detailsView: DetailsAdView?
     var detailsViewModel: DetailsAdViewModel?
@@ -57,7 +57,6 @@ class DetailAdViewController: UIViewController, UIScrollViewDelegate {
         
         self.view.addSubview(scrollView)
         
-        scrollView.delegate = self
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
 

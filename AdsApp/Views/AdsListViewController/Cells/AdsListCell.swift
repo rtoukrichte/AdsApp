@@ -66,17 +66,17 @@ class AdsListCell: UITableViewCell, ConfigurableCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Urgent"
-        label.font = UIFont(name: "HelveticaNeue-bold", size: 14)
+        label.font = UIFont(name: "HelveticaNeue-medium", size: 12)
         label.textColor = .white
         return label
     }()
     
     let urgentView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.red.withAlphaComponent(0.7)
+        view.backgroundColor = UIColor(red: 0.19, green: 0.55, blue: 0.91, alpha: 1.00)
         view.layer.masksToBounds = true
         view.isHidden = true
-        view.layer.cornerRadius = 6
+        view.layer.cornerRadius = 7
         return view
     }()
     
@@ -121,8 +121,8 @@ class AdsListCell: UITableViewCell, ConfigurableCell {
         
         addConstraint(NSLayoutConstraint(item: urgentView, attribute: .right, relatedBy: .equal, toItem: thumbImageView, attribute: .right, multiplier: 1, constant: -10))
         
-        addConstraint(NSLayoutConstraint(item: urgentView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 25))
-        addConstraint(NSLayoutConstraint(item: urgentView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0, constant: 60))
+        addConstraint(NSLayoutConstraint(item: urgentView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
+        addConstraint(NSLayoutConstraint(item: urgentView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0, constant: 50))
         
         addConstraint(NSLayoutConstraint(item: urgentLabel, attribute: .centerX, relatedBy: .equal, toItem: urgentView, attribute: .centerX, multiplier: 1, constant: 0))
         addConstraint(NSLayoutConstraint(item: urgentLabel, attribute: .centerY, relatedBy: .equal, toItem: urgentView, attribute: .centerY, multiplier: 1, constant: 0))

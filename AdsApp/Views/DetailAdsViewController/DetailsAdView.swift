@@ -34,7 +34,7 @@ class DetailsAdView: UIView {
     
     let separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
+        view.backgroundColor = .darkGray.withAlphaComponent(0.5)
         return view
     }()
     
@@ -100,8 +100,17 @@ class DetailsAdView: UIView {
         view.backgroundColor = UIColor.red
         view.layer.masksToBounds = true
         view.isHidden = true
-        view.layer.cornerRadius = 6
+        view.layer.cornerRadius = 7
         return view
+    }()
+    
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Description"
+        label.font = UIFont(name: "HelveticaNeue-medium", size: 15)
+        label.textColor = .black
+        return label
     }()
     
     private func setupViews() {
@@ -112,6 +121,7 @@ class DetailsAdView: UIView {
         addSubview(dateLabel)
         addSubview(separatorView)
         addSubview(descriptionTextView)
+        addSubview(descriptionLabel)
         
         urgentView.addSubview(urgentLabel)
         addSubview(urgentView)
@@ -119,7 +129,6 @@ class DetailsAdView: UIView {
         
         addConstraintsWithFormat("H:|-0-[v0]-0-|", views: thumbImageView)
         addConstraintsWithFormat("H:|-0-[v0]-0-|", views: urgentView)
-        
         addConstraintsWithFormat("H:|-15-[v0]-15-|", views: separatorView)
         
         addConstraint(NSLayoutConstraint(item: thumbImageView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 300))
@@ -144,22 +153,25 @@ class DetailsAdView: UIView {
         addConstraint(NSLayoutConstraint(item: dateLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 30))
         
         
-        addConstraint(NSLayoutConstraint(item: urgentView, attribute: .top, relatedBy: .equal, toItem: priceLabel, attribute: .bottom, multiplier: 1, constant: 10))
-        
+        addConstraint(NSLayoutConstraint(item: urgentView, attribute: .top, relatedBy: .equal, toItem: priceLabel, attribute: .bottom, multiplier: 1, constant: 15))
         addConstraint(NSLayoutConstraint(item: urgentView, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: self.frame.width-80))
-        addConstraint(NSLayoutConstraint(item: urgentView, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: -20))
         
-        addConstraint(NSLayoutConstraint(item: urgentView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 25))
+        addConstraint(NSLayoutConstraint(item: urgentView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
         addConstraint(NSLayoutConstraint(item: urgentView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0, constant: 60))
         
         addConstraint(NSLayoutConstraint(item: urgentLabel, attribute: .centerX, relatedBy: .equal, toItem: urgentView, attribute: .centerX, multiplier: 1, constant: 0))
         addConstraint(NSLayoutConstraint(item: urgentLabel, attribute: .centerY, relatedBy: .equal, toItem: urgentView, attribute: .centerY, multiplier: 1, constant: 0))
         
         
-        addConstraint(NSLayoutConstraint(item: separatorView, attribute: .top, relatedBy: .equal, toItem: dateLabel, attribute: .bottom, multiplier: 1, constant: 10))
-        addConstraint(NSLayoutConstraint(item: separatorView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 1.5))
+        addConstraint(NSLayoutConstraint(item: separatorView, attribute: .top, relatedBy: .equal, toItem: dateLabel, attribute: .bottom, multiplier: 1, constant: 15))
+        addConstraint(NSLayoutConstraint(item: separatorView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 1.2))
         
-        addConstraint(NSLayoutConstraint(item: descriptionTextView, attribute: .top, relatedBy: .equal, toItem: separatorView, attribute: .bottom, multiplier: 1, constant: 20))
+        
+        addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .top, relatedBy: .equal, toItem: separatorView, attribute: .bottom, multiplier: 1, constant: 20))
+        addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 15))
+        
+        
+        addConstraint(NSLayoutConstraint(item: descriptionTextView, attribute: .top, relatedBy: .equal, toItem: descriptionLabel, attribute: .bottom, multiplier: 1, constant: 10))
         addConstraint(NSLayoutConstraint(item: descriptionTextView, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 15))
         
         addConstraint(NSLayoutConstraint(item: descriptionTextView, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 15))

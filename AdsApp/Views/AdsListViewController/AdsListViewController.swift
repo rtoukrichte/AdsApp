@@ -10,11 +10,11 @@ import Combine
 
 class AdsListViewController: UIViewController {
 
-    let tableView = UITableView()
-    var collectionView: UICollectionView?
-    var safeArea: UILayoutGuide!
-    
     var activityLoader: UIActivityIndicatorView?
+    var collectionView: UICollectionView?
+    let tableView = UITableView()
+    
+    var safeArea: UILayoutGuide!
     
     let adsListViewModel = AdsListViewModel()
     private var cancellables = Set<AnyCancellable>()
@@ -31,12 +31,12 @@ class AdsListViewController: UIViewController {
         safeArea = view.layoutMarginsGuide
         
         showActivityLoader()
+        
         setupCollectionView()
         setupTableView()
         setupBinding()
-        
     }
-
+    
     private func setupCollectionView() {
         collectionView?.translatesAutoresizingMaskIntoConstraints = false
         collectionView?.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
@@ -53,6 +53,7 @@ class AdsListViewController: UIViewController {
         collectionView?.delegate = self
         collectionView?.dataSource = self
         collectionView?.showsHorizontalScrollIndicator = false
+        collectionView?.isHidden = true
         
         collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: CategoryCell.reuseIdentifier)
         
