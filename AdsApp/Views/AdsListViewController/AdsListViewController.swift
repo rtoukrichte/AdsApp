@@ -10,11 +10,13 @@ import Combine
 
 class AdsListViewController: UIViewController {
 
+    var safeArea: UILayoutGuide!
+    
     var activityLoader: UIActivityIndicatorView?
     var collectionView: UICollectionView?
     let tableView = UITableView()
     
-    var safeArea: UILayoutGuide!
+    weak var coordinator: AppCoordinator?
     
     let adsListViewModel = AdsListViewModel()
     private var cancellables = Set<AnyCancellable>()
@@ -197,10 +199,7 @@ extension AdsListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedAd = self.filtredAds[indexPath.row]
-        
-        let detailsAdViewModel = DetailsAdViewModel(ad: selectedAd, adsViewModel: adsListViewModel)
-        let detailsVC = DetailAdViewController(detailsViewModel: detailsAdViewModel)
-        self.navigationController?.pushViewController(detailsVC, animated: true)
+        coordinator?.pushDetailAd(for: selectedAd, adsVM: adsListViewModel)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -8,23 +8,33 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    var coordinator: AppCoordinator?
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let mainScene = UIWindow(windowScene: windowScene)
-        mainScene.backgroundColor = UIColor.white
+        let window = UIWindow(windowScene: windowScene)
+        window.backgroundColor = UIColor.white
         
-        let mainController = AdsListViewController()
-        let navigationController = UINavigationController(rootViewController: mainController)
+        let navigationController = UINavigationController()
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.backgroundColor = .white
-        mainScene.rootViewController = navigationController
         
-        self.window = mainScene
+        if #available(iOS 15.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            UINavigationBar.appearance().standardAppearance = navBarAppearance
+            UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        }
+        
+        coordinator = AppCoordinator(navController: navigationController)
+        coordinator?.start()
+        
+        window.rootViewController = navigationController
+        
+        self.window = window
         self.window?.makeKeyAndVisible()
         
     }

@@ -26,6 +26,8 @@
 		A4D0E9BE2B5172170077E294 /* DetailsAdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9BD2B5172170077E294 /* DetailsAdViewModel.swift */; };
 		A4D0E9C02B51850D0077E294 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9BF2B51850C0077E294 /* Extensions.swift */; };
 		A4D0E9C12B519F050077E294 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D0E9902B4DACB50077E294 /* Main.storyboard */; };
+		A4D0E9DA2B6C01150077E294 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9D92B6C01150077E294 /* Coordinator.swift */; };
+		A4D0E9DC2B6C01210077E294 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0E9DB2B6C01210077E294 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		A4D0E9BB2B5048830077E294 /* DetailsAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAdView.swift; sourceTree = "<group>"; };
 		A4D0E9BD2B5172170077E294 /* DetailsAdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAdViewModel.swift; sourceTree = "<group>"; };
 		A4D0E9BF2B51850C0077E294 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A4D0E9D92B6C01150077E294 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A4D0E9DB2B6C01210077E294 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		A4D0E9892B4DACB50077E294 /* AdsApp */ = {
 			isa = PBXGroup;
 			children = (
+				A4D0E9D82B6C01060077E294 /* Coordinator */,
 				A4D0E9A82B4DB25B0077E294 /* Models */,
 				A4D0E9B72B4EFB9D0077E294 /* Views */,
 				A4D0E9B12B4DCE540077E294 /* ViewModel */,
@@ -178,6 +183,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		A4D0E9D82B6C01060077E294 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0E9D92B6C01150077E294 /* Coordinator.swift */,
+				A4D0E9DB2B6C01210077E294 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,10 +269,12 @@
 				A4D0E9A32B4DB1BA0077E294 /* DetailAdViewController.swift in Sources */,
 				A4D0E9A02B4DB1870077E294 /* AdsListCell.swift in Sources */,
 				A4D0E9AC2B4DB2850077E294 /* AdsModel.swift in Sources */,
+				A4D0E9DC2B6C01210077E294 /* AppCoordinator.swift in Sources */,
 				A4D0E98F2B4DACB50077E294 /* AdsListViewController.swift in Sources */,
 				A4D0E98B2B4DACB50077E294 /* AppDelegate.swift in Sources */,
 				A4D0E9AA2B4DB2790077E294 /* CategoriesModel.swift in Sources */,
 				A4D0E98D2B4DACB50077E294 /* SceneDelegate.swift in Sources */,
+				A4D0E9DA2B6C01150077E294 /* Coordinator.swift in Sources */,
 				A4D0E9BE2B5172170077E294 /* DetailsAdViewModel.swift in Sources */,
 				A4D0E9C02B51850D0077E294 /* Extensions.swift in Sources */,
 				A4D0E9B52B4EED380077E294 /* ReusableCell.swift in Sources */,
